@@ -1,0 +1,38 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='scripts.js') }}" defer></script>
+</head>
+<!-- templates/index.html -->
+    <body>
+        <div class="container">
+            <div class="upload-section">
+                <div class="upload-form">
+                    <h2>Upload a file</h2>
+                    <p>Attach the file below</p>
+                    <form id="uploadForm" method="post" enctype="multipart/form-data">
+                        <div class="upload-area" id="uploadArea">
+                            <input type="file" id="uploadInput" name="uploadInput" accept=".jpg, .jpeg, .png" required>
+                            <label for="uploadInput">Drag file(s) here to upload.<br>Alternatively, you can select a file by <a href="#" onclick="document.getElementById('uploadInput').click(); return false;">clicking here</a></label>
+                        </div>
+                        <div id="fileName" class="file-name"></div>
+                        <button type="submit" id="submitBtn">Upload File</button>
+                    </form>
+                    <div id="loadingIndicator" style="display: none;">
+                        <div class="spinner"></div>
+                        <p>Loading...</p>
+                    </div>
+                </div>
+                <div id="imageDisplay" class="image-display"></div>
+            </div>
+            <div id="responseOutput" class="response-output"></div>
+        </div>
+  
+    
+</body>
+</html>
