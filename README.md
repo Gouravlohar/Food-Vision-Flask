@@ -1,4 +1,5 @@
 # Food Vision Flask
+Article [Here](https://www.analyticsvidhya.com/blog/2024/08/building-a-food-vision-webapp-with-the-gemini-flash-1-5-model/)
 
 Food Vision is a web application built using Flask.
 
